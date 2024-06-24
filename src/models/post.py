@@ -8,7 +8,8 @@ class UserPostIn(BaseModel):
 class UserPostOut(UserPostIn):
     model_config = ConfigDict(from_attributes=True)
     id: int
-    
+    user_id: int
+
 
 class UserCommentIn(BaseModel):
     post_id: int
@@ -18,6 +19,7 @@ class UserCommentIn(BaseModel):
 class UserCommentOut(UserCommentIn):
     model_config = ConfigDict(from_attributes=True)
     id: int
+    user_id: int
 
 
 class UserPostWithComments(BaseModel):
